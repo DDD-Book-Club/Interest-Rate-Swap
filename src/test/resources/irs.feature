@@ -1,15 +1,17 @@
 Feature: IRS payment computation
   In order to pay/receive money according to the term sheet
-  As the saler of the product to the client
-  I want to see the different cash flow that will be paid, given observation of market data
+  As the OOBank who signed this contract
+  I want to see the different cash flow that will be paid,
+  given observation of market data.
 
   The cash flow are computed as: CF = receiving - paying 
 
-  If we have a interest rate (fixed or float) of X% then, we compute the amount for each month as Nominal* X% / 12
+  If we have a interest rate (fixed or float) of X% then,
+  we compute the amount for each month as Nominal* X% / 12
 
-  Scenario: One year fixed rate/Libro monthly Interest Rate Swap
+  Scenario: One year Fixed Rate/Libor monthly Interest Rate Swap
   Given the nominal is 1000000
-  And we receive an fixed interest rate of 6.25
+  And we receive a fixed interest rate of 6.25
   And the start date is 01/01/2014
   And the end date is 01/01/2015
   And the observed Libor rates are
@@ -26,7 +28,6 @@ Feature: IRS payment computation
 	  | 01/10/2014 | 5.82% |
 	  | 01/11/2014 | 6.12% |
 	  | 01/12/2014 | 6.15% |
-	  | 01/01/2015 | 6.07% |
 
   When I ask for expected cash flows
   Then I should see the following values
@@ -43,4 +44,3 @@ Feature: IRS payment computation
 	  | 01/10/2014 |    358.33 |
 	  | 01/11/2014 |    108.33 |
 	  | 01/12/2014 |     83.33 |
-	  | 01/01/2015 |    150.00 |
