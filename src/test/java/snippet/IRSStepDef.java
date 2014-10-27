@@ -48,12 +48,12 @@ public class IRSStepDef {
 
     @Then("^I should receive \"(.*?)\"€$")
     public void i_should_receive_€(double amount) throws Throwable {
-        assertThat(IRS.compute(fixing), is(amount));
+        assertThat(IRS.calculate(fixing), is(amount));
     }
 
     @Then("^I should pay \"(.*?)\"€$")
     public void i_should_pay_€(double amount) throws Throwable {
-        assertThat(IRS.compute(fixing), is(-amount));
+        assertThat(IRS.calculate(fixing), is(-amount));
     }
 }
 
