@@ -1,10 +1,11 @@
-package snippet;
+package bdd.approach;
 
 import static org.hamcrest.CoreMatchers.is;
 import static org.junit.Assert.assertThat;
 
 import java.util.Date;
 
+import bdd.approach.IRS;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 

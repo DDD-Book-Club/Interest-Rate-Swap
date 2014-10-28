@@ -15,6 +15,7 @@ Feature: IRS payment computation
   
   A swap commonly has two legs, each leg representing a "bond"
 
+  @ignore
   Scenario: IRS first payment with OOBank receiving at fixed rate
     Given an annual IRS from Jan 15, 2014 to Jan 15, 2015 for a notional of EUR "1 000 000.0"
     And with a fixed rate of 6.25
