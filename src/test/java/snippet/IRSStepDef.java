@@ -5,10 +5,6 @@ import static org.junit.Assert.assertThat;
 
 import java.util.Date;
 
-import org.hamcrest.CoreMatchers;
-import org.junit.Assert;
-
-import cucumber.api.PendingException;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 
