@@ -32,5 +32,10 @@ public class Cashflow {
 		Cashflow other = (Cashflow) obj;
 		return Math.abs(amount - other.amount) <= ACCURACY && date == other.date;
 	}
+	
+	@Override
+	public String toString() {
+	    return getClass().getName() + "[date=" + date + ", amount=" + amount + "]";
+	}
 
 }
